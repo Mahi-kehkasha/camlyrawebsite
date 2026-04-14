@@ -358,3 +358,150 @@ if (getStartedForm && getStartedNote) {
         getStartedForm.reset();
     });
 }
+
+// Specialized services stacked scroll reveal
+function initSpecializedServicesScroll() {
+    const section = document.getElementById('specialized-services');
+    if (!section) return;
+
+    const refCards = Array.from(section.querySelectorAll('.specialized-ref-card[data-service]'));
+    const refLabels = Array.from(section.querySelectorAll('.specialized-ref-label[data-service]'));
+    const hasReferenceMapping = refCards.length && refLabels.length;
+
+    if (hasReferenceMapping) {
+        let activeService = refCards[0].getAttribute('data-service');
+
+        function setReferenceActive(serviceValue) {
+            activeService = serviceValue;
+            refCards.forEach((card) => {
+                const isActive = card.getAttribute('data-service') === serviceValue;
+                card.classList.toggle('active', isActive);
+                card.classList.toggle('is-active', isActive);
+            });
+            refLabels.forEach((label) => {
+                const isActive = label.getAttribute('data-service') === serviceValue;
+                label.classList.toggle('active', isActive);
+                label.classList.toggle('is-active', isActive);
+                label.setAttribute('aria-pressed', String(isActive));
+            });
+        }
+
+        function syncReferenceWithScroll() {
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                setReferenceActive(refCards[0].getAttribute('data-service'));
+                return;
+            }
+
+            const sectionRect = section.getBoundingClientRect();
+            const sectionScrollable = Math.max(1, section.offsetHeight - window.innerHeight);
+            const scrolledWithinSection = Math.max(0, Math.min(sectionScrollable, -sectionRect.top));
+            const progress = scrolledWithinSection / sectionScrollable;
+            const nextIndex = Math.min(refCards.length - 1, Math.floor(progress * refCards.length));
+            const nextService = refCards[nextIndex].getAttribute('data-service');
+            if (nextService !== activeService) {
+                setReferenceActive(nextService);
+            }
+        }
+
+        refLabels.forEach((label) => {
+            label.addEventListener('click', () => {
+                const serviceValue = label.getAttribute('data-service');
+                if (!serviceValue) return;
+                setReferenceActive(serviceValue);
+
+                const targetCard = refCards.find((card) => card.getAttribute('data-service') === serviceValue);
+                targetCard?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        });
+
+        setReferenceActive(activeService);
+        syncReferenceWithScroll();
+        window.addEventListener('scroll', syncReferenceWithScroll, { passive: true });
+        window.addEventListener('resize', syncReferenceWithScroll);
+        return;
+    }
+
+    const cards = Array.from(section.querySelectorAll('.specialized-card'));
+    const navPills = Array.from(section.querySelectorAll('.specialized-nav-pill'));
+    if (!cards.length) return;
+    // If pills are not interactive controls (no indices), skip scroll-story mode.
+    const hasIndexedControls = navPills.some((pill) => pill.hasAttribute('data-service-index'));
+    if (!hasIndexedControls) return;
+
+    let activeIndex = 0;
+
+    function setActiveIndex(nextIndex) {
+        activeIndex = Math.max(0, Math.min(cards.length - 1, nextIndex));
+        cards.forEach((card, idx) => {
+            card.classList.toggle('is-revealed', idx <= activeIndex);
+            card.classList.toggle('is-active', idx === activeIndex);
+        });
+        navPills.forEach((pill, idx) => {
+            pill.classList.toggle('is-active', idx === activeIndex);
+        });
+    }
+
+    function syncWithScroll() {
+        // On smaller screens keep all cards open and disable scroll-story behavior.
+        if (window.matchMedia('(max-width: 900px)').matches) {
+            cards.forEach((card, idx) => {
+                card.classList.add('is-revealed');
+                card.classList.toggle('is-active', idx === 0);
+            });
+            navPills.forEach((pill, idx) => pill.classList.toggle('is-active', idx === 0));
+            return;
+        }
+
+        // Sticky-story progress: map section scroll progress to one active card.
+        const sectionRect = section.getBoundingClientRect();
+        const sectionScrollable = Math.max(1, section.offsetHeight - window.innerHeight);
+        const scrolledWithinSection = Math.max(0, Math.min(sectionScrollable, -sectionRect.top));
+        const progress = scrolledWithinSection / sectionScrollable;
+        const nextIndex = Math.min(cards.length - 1, Math.floor(progress * cards.length));
+        if (nextIndex !== activeIndex) {
+            setActiveIndex(nextIndex);
+        }
+    }
+
+    navPills.forEach((pill) => {
+        pill.addEventListener('click', () => {
+            const idx = Number(pill.getAttribute('data-service-index'));
+            if (Number.isNaN(idx)) return;
+            setActiveIndex(idx);
+            cards[idx]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    });
+
+    setActiveIndex(0);
+    syncWithScroll();
+    window.addEventListener('scroll', syncWithScroll, { passive: true });
+    window.addEventListener('resize', syncWithScroll);
+}
+
+initSpecializedServicesScroll();
+
+// Fold specialized service cards while scrolling through section
+function initSpecializedServicesFoldState() {
+    const section = document.getElementById('specialized-services');
+    if (!section) return;
+    if (section.classList.contains('section-specialized-reference')) return;
+
+    function updateFoldState() {
+        if (window.matchMedia('(max-width: 900px)').matches) {
+            section.classList.remove('is-folded');
+            return;
+        }
+
+        const rect = section.getBoundingClientRect();
+        const vh = window.innerHeight || 1;
+        // Start folding earlier and keep it stable while section is in view.
+        const shouldFold = rect.top < vh * 0.28 && rect.bottom > vh * 0.28;
+        section.classList.toggle('is-folded', shouldFold);
+    }
+
+    updateFoldState();
+    window.addEventListener('scroll', updateFoldState, { passive: true });
+    window.addEventListener('resize', updateFoldState);
+}
+
+initSpecializedServicesFoldState();
