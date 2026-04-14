@@ -1,0 +1,397 @@
+/* Team & founder pages — reference-aligned (cream, teal stats, navy type) */
+
+body.team-page {
+    background: #fdfbf7;
+}
+
+.team-page .page-header,
+.founder-page .page-header {
+    overflow: visible;
+}
+
+.team-page #navbar,
+.founder-page #navbar {
+    background: rgba(253, 251, 247, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 rgba(46, 58, 57, 0.06);
+}
+
+.team-page #navbar.scrolled,
+.founder-page #navbar.scrolled {
+    background: rgba(253, 251, 247, 0.97);
+}
+
+.team-page .nav-link-active,
+.founder-page .nav-link-active {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    font-weight: 600;
+}
+
+.team-main,
+.founder-main {
+    padding-top: 5.5rem;
+}
+
+/* —— Team hero —— */
+.team-hero {
+    padding: 3.5rem 0 2.5rem;
+    text-align: center;
+}
+
+.team-hero-inner {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.team-kicker {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #5f8f8b;
+}
+
+.team-hero h1 {
+    margin: 0 0 1.35rem;
+    font-size: clamp(2rem, 4.5vw, 2.85rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #0a1128;
+}
+
+.team-lead {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #5a5f5e;
+}
+
+/* —— Stats card —— */
+.team-stats {
+    padding: 0 0 3.5rem;
+}
+
+.team-stats-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.25rem, 3vw, 2.5rem);
+    background: linear-gradient(145deg, #d8ebe8 0%, #c5dfd9 100%);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(95, 143, 139, 0.12);
+    border: 1px solid rgba(95, 143, 139, 0.2);
+}
+
+.team-stat {
+    text-align: center;
+    padding: 0.5rem 0.35rem;
+}
+
+.team-stat-num {
+    display: block;
+    font-size: clamp(1.85rem, 4vw, 2.65rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: #3d7a74;
+    letter-spacing: -0.02em;
+}
+
+.team-stat-label {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #4a857e;
+}
+
+/* —— Vision / Mission / Motto —— */
+.team-pillars {
+    padding: 0 0 4rem;
+}
+
+.team-pillars-inner {
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.team-pillar {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(46, 58, 57, 0.08);
+}
+
+.team-pillar:last-child {
+    border-bottom: 1px solid rgba(46, 58, 57, 0.08);
+}
+
+.team-pillar-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(46, 58, 57, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2e3a39;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.team-pillar-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.team-pillar-body h2 {
+    margin: 0 0 0.65rem;
+    font-size: clamp(1.35rem, 2.5vw, 1.6rem);
+    font-weight: 700;
+    color: #0a1128;
+}
+
+.team-pillar-body p {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: #555;
+}
+
+.team-pillar-body q {
+    font-style: italic;
+}
+
+/* —— Founder teaser (team page) —— */
+.team-founder-cta {
+    padding: 0 0 4.5rem;
+}
+
+.team-founder-card {
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 320px);
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    align-items: stretch;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid rgba(46, 58, 57, 0.08);
+    box-shadow: 0 16px 48px rgba(46, 58, 57, 0.06);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.team-founder-card:hover {
+    box-shadow: 0 22px 56px rgba(46, 58, 57, 0.1);
+    transform: translateY(-2px);
+}
+
+.team-founder-card:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.team-founder-card-text {
+    padding: 0.5rem 0.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-founder-eyebrow {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #5f8f8b;
+    margin-bottom: 0.5rem;
+}
+
+.team-founder-title {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.5rem, 3vw, 1.85rem);
+    font-weight: 700;
+    color: #0a1128;
+}
+
+.team-founder-card-text p {
+    margin: 0 0 1rem;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: #5a5f5e;
+}
+
+.team-founder-link {
+    font-weight: 600;
+    color: #3d7a74;
+    margin-top: auto;
+}
+
+.team-founder-card-visual {
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 220px;
+    background: #e8f0ed;
+}
+
+.team-founder-card-visual img {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* —— Founder profile page —— */
+.founder-back {
+    padding: 0 0 1rem;
+}
+
+.founder-back a {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: #3d7a74;
+    text-decoration: none;
+}
+
+.founder-back a:hover {
+    text-decoration: underline;
+}
+
+.founder-main {
+    padding-bottom: 4rem;
+}
+
+.founder-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 400px);
+    gap: clamp(2rem, 5vw, 3.5rem);
+    align-items: start;
+}
+
+.founder-kicker {
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.founder-main h1 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    color: #0a1128;
+}
+
+.founder-kicker.team-kicker {
+    color: #4a9e96;
+    font-size: 1rem;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+}
+
+.founder-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+    margin: 0 0 2rem;
+}
+
+.founder-copy h2 {
+    margin: 2rem 0 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1f2e;
+}
+
+.founder-copy p {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+}
+
+.founder-aside {
+    position: relative;
+}
+
+.founder-photo-wrap {
+    position: sticky;
+    top: 6.5rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(46, 58, 57, 0.12);
+    background: #e8f0ed;
+}
+
+.founder-photo-wrap img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: block;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .team-stats-card {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .team-founder-card {
+        grid-template-columns: 1fr;
+    }
+
+    .team-founder-card-visual {
+        min-height: 260px;
+        order: -1;
+    }
+
+    .founder-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-aside {
+        order: -1;
+    }
+
+    .founder-photo-wrap {
+        position: relative;
+        top: auto;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-main,
+    .founder-main {
+        padding-top: 4.75rem;
+    }
+
+    .team-hero {
+        padding-top: 2.5rem;
+    }
+
+    .team-pillar {
+        flex-direction: column;
+        gap: 0.85rem;
+        padding: 1.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .team-stat-num {
+        font-size: 1.65rem;
+    }
+}

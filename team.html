@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Meet Our Team | Calmyra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/team.css">
+</head>
+
+<body class="team-page">
+    <header class="page-header">
+        <nav id="navbar">
+            <div class="nav-container">
+                <a href="index.html#hero" class="nav-brand" aria-label="Calmyra home">
+                    <img src="assets/images/logo.png" alt="Calmyra — healing minds, transforming lives" width="2000" height="2000" decoding="async" fetchpriority="high">
+                </a>
+                <div class="nav-menu" id="nav-menu">
+                    <div class="nav-menu-primary">
+                    <a href="index.html#hero">Home</a>
+                    <div class="nav-mega-wrap">
+                        <button type="button" class="nav-mega-btn" id="nav-mega-services-btn" aria-expanded="false"
+                            aria-controls="mega-services-panel" aria-haspopup="true">
+                            Services
+                            <span class="nav-mega-chevron" aria-hidden="true"></span>
+                        </button>
+                        <div class="mega-panel" id="mega-services-panel" role="navigation" aria-label="Services menu" hidden>
+                            <div class="mega-panel-inner mega-layout">
+                                <aside class="mega-sidebar mega-l1">
+                                    <p class="mega-overline">Services</p>
+                                    <ul class="mega-list mega-l1-list">
+                                        <li><button type="button" class="mega-l1-btn is-active" data-l1="individual">Individual <span class="mega-chev" aria-hidden="true">›</span></button></li>
+                                        <li><button type="button" class="mega-l1-btn" data-l1="relationship">Relationship <span class="mega-chev" aria-hidden="true">›</span></button></li>
+                                        <li><button type="button" class="mega-l1-btn" data-l1="teen">Teen and Children <span class="mega-chev" aria-hidden="true">›</span></button></li>
+                                        <li><button type="button" class="mega-l1-btn" data-l1="group">Group Therapy <span class="mega-chev" aria-hidden="true">›</span></button></li>
+                                        <li><button type="button" class="mega-l1-btn" data-l1="geriatrics">Geriatrics <span class="mega-chev" aria-hidden="true">›</span></button></li>
+                                    </ul>
+                                </aside>
+                                <div class="mega-flyouts" id="mega-flyouts">
+                                    <div class="mega-flyout-row">
+                                        <div class="mega-card mega-l2-stack">
+                                            <div class="mega-l2-set is-active" data-l1="individual">
+                                                <ul class="mega-list mega-l2-list mega-l2-list--ruled mega-l2-list--scroll">
+                                                    <li><button type="button" class="mega-l2-btn is-active" data-l1="individual" data-l2="ind-disorder">Specific Disorder <span class="mega-chev" aria-hidden="true">›</span></button></li>
+                                                    <li><button type="button" class="mega-l2-btn" data-l1="individual" data-l2="ind-crises">Life Crises/ Specific Event <span class="mega-chev" aria-hidden="true">›</span></button></li>
+                                                    <li><button type="button" class="mega-l2-btn" data-l1="individual" data-l2="ind-career">Career <span class="mega-chev" aria-hidden="true">›</span></button></li>
+                                                    <li><button type="button" class="mega-l2-btn" data-l1="individual" data-l2="ind-addictions">Addictions <span class="mega-chev" aria-hidden="true">›</span></button></li>
+                                                    <li><button type="button" class="mega-l2-btn" data-l1="individual" data-l2="ind-abuse">Abuse <span class="mega-chev" aria-hidden="true">›</span></button></li>
+                                                    <li><button type="button" class="mega-l2-btn" data-l1="individual" data-l2="ind-eating">Eating Disorders <span class="mega-chev" aria-hidden="true">›</span></button></li>
+                                                    <li><button type="button" class="mega-l2-btn" data-l1="individual" data-l2="ind-depression">Depression <span class="mega-chev" aria-hidden="true">›</span></button></li>
+                                                    <li><button type="button" class="mega-l2-btn" data-l1="individual" data-l2="ind-emotional">Emotional Intelligence <span class="mega-chev" aria-hidden="true">›</span></button></li>
+                                                    <li><button type="button" class="mega-l2-btn" data-l1="individual" data-l2="ind-neuro">Neurodevelopmental Disorders <span class="mega-chev" aria-hidden="true">›</span></button></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-l2-set" data-l1="relationship" hidden>
+                                                <nav class="mega-leaf-nav" aria-label="Relationship services">
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Couple Counselling</a>
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Divorce Counselling</a>
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Marriage Counselling</a>
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Parent Counselling</a>
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Pre-Marital Counselling</a>
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Relationship Counselling</a>
+                                                </nav>
+                                            </div>
+                                            <div class="mega-l2-set" data-l1="teen" hidden>
+                                                <nav class="mega-leaf-nav" aria-label="Teen and children services">
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Adolescent anxiety &amp; mood</a>
+                                                    <a class="mega-leaf-link" href="index.html#new-services">School stress &amp; performance</a>
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Behavioural &amp; emotional support</a>
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Family sessions for teens</a>
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Identity &amp; social skills</a>
+                                                </nav>
+                                            </div>
+                                            <div class="mega-l2-set" data-l1="group" hidden>
+                                                <nav class="mega-leaf-nav" aria-label="Group therapy">
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Laughter Therapy</a>
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Art Therapy</a>
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Yoga Therapy</a>
+                                                </nav>
+                                            </div>
+                                            <div class="mega-l2-set" data-l1="geriatrics" hidden>
+                                                <nav class="mega-leaf-nav" aria-label="Geriatric services">
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Alzheimer's</a>
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Parkinson's</a>
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Dementia</a>
+                                                    <a class="mega-leaf-link" href="index.html#new-services">Chronic Illnesses</a>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <div class="mega-card mega-l3-stack" id="mega-l3-stack">
+                                            <div class="mega-l3-set is-active" data-l1="individual" data-l2="ind-disorder">
+                                                <a href="index.html#new-services">Eating Disorder</a>
+                                                <a href="index.html#new-services">Mood Disorder</a>
+                                                <a href="index.html#new-services">Anxiety</a>
+                                                <a href="index.html#new-services">OCD</a>
+                                                <a href="index.html#new-services">Postpartum Depression</a>
+                                                <a href="index.html#new-services">Personality Disorder</a>
+                                                <a href="index.html#new-services">Phobias</a>
+                                                <a href="index.html#new-services">Psychosis</a>
+                                                <a href="index.html#new-services">PTSD</a>
+                                                <a href="index.html#new-services">Sleeping Disorder</a>
+                                                <a href="index.html#new-services">Substance Abuse</a>
+                                            </div>
+                                            <div class="mega-l3-set" data-l1="individual" data-l2="ind-crises" hidden>
+                                                <a href="index.html#new-services">Bereavement &amp; loss</a>
+                                                <a href="index.html#new-services">Divorce &amp; separation</a>
+                                                <a href="index.html#new-services">Job loss &amp; redundancy</a>
+                                                <a href="index.html#new-services">Relocation &amp; culture change</a>
+                                                <a href="index.html#new-services">Serious illness diagnosis</a>
+                                                <a href="index.html#new-services">Accident or assault aftermath</a>
+                                                <a href="index.html#new-services">Financial crisis</a>
+                                                <a href="index.html#new-services">Relationship betrayal</a>
+                                                <a href="index.html#new-services">Identity &amp; life transitions</a>
+                                                <a href="index.html#new-services">Legal proceedings stress</a>
+                                            </div>
+                                            <div class="mega-l3-set" data-l1="individual" data-l2="ind-career" hidden>
+                                                <a href="index.html#new-services">Burnout &amp; exhaustion</a>
+                                                <a href="index.html#new-services">Executive &amp; leadership stress</a>
+                                                <a href="index.html#new-services">Impostor syndrome</a>
+                                                <a href="index.html#new-services">Return-to-work support</a>
+                                                <a href="index.html#new-services">Workplace conflict</a>
+                                                <a href="index.html#new-services">Performance anxiety</a>
+                                                <a href="index.html#new-services">Career change decisions</a>
+                                                <a href="index.html#new-services">Presentation &amp; public speaking fear</a>
+                                                <a href="index.html#new-services">Work–life balance</a>
+                                            </div>
+                                            <div class="mega-l3-set" data-l1="individual" data-l2="ind-addictions" hidden>
+                                                <a href="index.html#new-services">Alcohol use disorder</a>
+                                                <a href="index.html#new-services">Tobacco &amp; nicotine</a>
+                                                <a href="index.html#new-services">Cannabis dependence</a>
+                                                <a href="index.html#new-services">Opioid &amp; prescription misuse</a>
+                                                <a href="index.html#new-services">Stimulant use</a>
+                                                <a href="index.html#new-services">Gambling disorder</a>
+                                                <a href="index.html#new-services">Gaming &amp; internet overuse</a>
+                                                <a href="index.html#new-services">Shopping &amp; spending compulsion</a>
+                                                <a href="index.html#new-services">Relapse prevention planning</a>
+                                                <a href="index.html#new-services">Family &amp; couples support</a>
+                                            </div>
+                                            <div class="mega-l3-set" data-l1="individual" data-l2="ind-abuse" hidden>
+                                                <a href="index.html#new-services">Domestic abuse &amp; intimate partner violence</a>
+                                                <a href="index.html#new-services">Child &amp; adolescent maltreatment</a>
+                                                <a href="index.html#new-services">Sexual abuse recovery</a>
+                                                <a href="index.html#new-services">Emotional &amp; coercive control</a>
+                                                <a href="index.html#new-services">Workplace bullying &amp; harassment</a>
+                                                <a href="index.html#new-services">Elder abuse concerns</a>
+                                                <a href="index.html#new-services">Safety planning</a>
+                                                <a href="index.html#new-services">Trauma-informed therapy</a>
+                                                <a href="index.html#new-services">Flashbacks &amp; dissociation</a>
+                                                <a href="index.html#new-services">Navigating police &amp; legal systems</a>
+                                            </div>
+                                            <div class="mega-l3-set" data-l1="individual" data-l2="ind-eating" hidden>
+                                                <a href="index.html#new-services">Anorexia nervosa</a>
+                                                <a href="index.html#new-services">Bulimia nervosa</a>
+                                                <a href="index.html#new-services">Binge eating disorder</a>
+                                                <a href="index.html#new-services">ARFID</a>
+                                                <a href="index.html#new-services">OSFED / atypical presentations</a>
+                                                <a href="index.html#new-services">Body dysmorphic disorder</a>
+                                                <a href="index.html#new-services">Orthorexia &amp; rigid eating</a>
+                                                <a href="index.html#new-services">Athletes &amp; performance pressure</a>
+                                                <a href="index.html#new-services">Diabetes &amp; eating patterns</a>
+                                                <a href="index.html#new-services">Family-based treatment support</a>
+                                            </div>
+                                            <div class="mega-l3-set" data-l1="individual" data-l2="ind-depression" hidden>
+                                                <a href="index.html#new-services">Major depressive disorder</a>
+                                                <a href="index.html#new-services">Persistent depressive disorder (dysthymia)</a>
+                                                <a href="index.html#new-services">Seasonal affective patterns</a>
+                                                <a href="index.html#new-services">Postpartum &amp; perinatal mood</a>
+                                                <a href="index.html#new-services">Bipolar depression episodes</a>
+                                                <a href="index.html#new-services">Treatment-resistant depression</a>
+                                                <a href="index.html#new-services">CBT for depression</a>
+                                                <a href="index.html#new-services">Behavioural activation</a>
+                                                <a href="index.html#new-services">Interpersonal therapy (IPT)</a>
+                                                <a href="index.html#new-services">Medication liaison with psychiatrist</a>
+                                            </div>
+                                            <div class="mega-l3-set" data-l1="individual" data-l2="ind-emotional" hidden>
+                                                <a href="index.html#new-services">Self-awareness &amp; reflection</a>
+                                                <a href="index.html#new-services">Self-regulation &amp; impulse control</a>
+                                                <a href="index.html#new-services">Motivation &amp; goal clarity</a>
+                                                <a href="index.html#new-services">Empathy in relationships</a>
+                                                <a href="index.html#new-services">Social skills &amp; communication</a>
+                                                <a href="index.html#new-services">Assertiveness &amp; boundaries</a>
+                                                <a href="index.html#new-services">Anger awareness &amp; management</a>
+                                                <a href="index.html#new-services">Workplace emotional intelligence</a>
+                                                <a href="index.html#new-services">Leadership presence</a>
+                                                <a href="index.html#new-services">Conflict resolution styles</a>
+                                            </div>
+                                            <div class="mega-l3-set" data-l1="individual" data-l2="ind-neuro" hidden>
+                                                <a href="index.html#new-services">ADHD</a>
+                                                <a href="index.html#new-services">Autism Spectrum Disorder</a>
+                                                <a href="index.html#new-services">Cerebral palsy</a>
+                                                <a href="index.html#new-services">Communication Disorders</a>
+                                                <a href="index.html#new-services">Intellectual disabilities</a>
+                                                <a href="index.html#new-services">Learning disorders</a>
+                                                <a href="index.html#new-services">Tic disorders &amp; Tourette</a>
+                                                <a href="index.html#new-services">Developmental coordination disorder</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mega-promo">
+                                    <img src="assets/images/homepage.webp" alt="Calm wellness moment" width="560" height="640" decoding="async" class="mega-promo-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-ns-wrap">
+                        <button type="button" class="nav-ns-btn" id="nav-ns-btn" aria-expanded="false" aria-controls="ns-dropdown-panel" aria-haspopup="true">
+                            <span class="nav-spark" aria-hidden="true">✨</span>
+                            New Services
+                            <span class="nav-ns-chevron" aria-hidden="true"></span>
+                        </button>
+                        <div class="ns-dropdown" id="ns-dropdown-panel" role="menu" aria-label="New wellness services" hidden>
+                            <a href="index.html#service-physio" class="ns-dropdown-link" role="menuitem">Physiotherapy</a>
+                            <a href="index.html#service-cupping" class="ns-dropdown-link" role="menuitem">Cupping</a>
+                            <a href="index.html#service-diet" class="ns-dropdown-link" role="menuitem">Diet and Nutrition</a>
+                            <a href="index.html#service-sleep" class="ns-dropdown-link" role="menuitem">Sleep Test</a>
+                        </div>
+                    </div>
+                    <a href="assessment.html">Assessment</a>
+                    <a href="team.html" class="nav-link-active" aria-current="page">Team</a>
+                    <a href="index.html#blog">Blog</a>
+                    </div>
+                    <div class="nav-actions">
+                        <a href="index.html#get-started" class="nav-link">Join community</a>
+                        <a href="index.html#footer" class="btn btn-secondary btn-sm">Booking Hub</a>
+                    </div>
+                </div>
+                <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="team-main" id="team-main">
+        <section class="team-hero" aria-labelledby="team-hero-title">
+            <div class="container team-hero-inner">
+                <p class="team-kicker">About us</p>
+                <h1 id="team-hero-title">Healing minds, transforming lives.</h1>
+                <p class="team-lead">Welcome to Calmyra, a place where your mental health and emotional well-being are our utmost priority. We understand that seeking support is a courageous step, and we want you to know that you are not alone on this journey. Here, you will find a haven of empathy, care, and professional support, designed to help you navigate life&apos;s challenges with strength and resilience.</p>
+            </div>
+        </section>
+
+        <section class="team-stats" aria-label="Calmyra at a glance">
+            <div class="container">
+                <div class="team-stats-card">
+                    <div class="team-stat">
+                        <span class="team-stat-num">1000+</span>
+                        <span class="team-stat-label">Problems solved</span>
+                    </div>
+                    <div class="team-stat">
+                        <span class="team-stat-num">99%</span>
+                        <span class="team-stat-label">Client satisfaction</span>
+                    </div>
+                    <div class="team-stat">
+                        <span class="team-stat-num">8+</span>
+                        <span class="team-stat-label">Years experienced clinicians</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-pillars" aria-label="Vision, mission, and motto">
+            <div class="container team-pillars-inner">
+                <article class="team-pillar">
+                    <div class="team-pillar-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/><circle cx="24" cy="24" r="9" stroke="currentColor" stroke-width="1.5"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
+                    </div>
+                    <div class="team-pillar-body">
+                        <h2>Vision</h2>
+                        <p>At Calmyra, we are building a future where mental health is everyone&apos;s reality, not just a distant dream. We empower individuals to navigate life&apos;s complexities with resilience and grace, creating a society where emotional well-being thrives.</p>
+                    </div>
+                </article>
+                <article class="team-pillar">
+                    <div class="team-pillar-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><path d="M10 38 L24 8 L38 38 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M24 22 L24 32 M20 32 L28 32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M22 14 L26 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="team-pillar-body">
+                        <h2>Mission</h2>
+                        <p>Dedicated to providing a sanctuary for healing, we offer personalized mental health care and wellness services, empowering individuals from all walks of life to realize their fullest potential through expert support and compassionate care. Our commitment to excellence and innovation fosters hope and makes a lasting, positive impact on those we serve.</p>
+                    </div>
+                </article>
+                <article class="team-pillar">
+                    <div class="team-pillar-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><path d="M24 8 C16 18 12 26 12 32 C12 36 16 40 24 40 C32 40 36 36 36 32 C36 26 32 18 24 8 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M20 28 Q24 32 28 28" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="team-pillar-body">
+                        <h2>Motto</h2>
+                        <p><q>Your wellness, our priority</q> encapsulates our commitment to putting your needs first and delivering excellence in care.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="team-founder-cta">
+            <div class="container">
+                <a href="dr-safina.html" class="team-founder-card">
+                    <div class="team-founder-card-text">
+                        <span class="team-founder-eyebrow">Leadership</span>
+                        <h2 class="team-founder-title">About our founder</h2>
+                        <p>Meet Dr. Safina Naaz — psychologist, educator, and entrepreneur — and read her journey in mental wellness.</p>
+                        <span class="team-founder-link">Read profile <span aria-hidden="true">→</span></span>
+                    </div>
+                    <div class="team-founder-card-visual">
+                        <img src="assets/images/drSafinaNaaz.webp" alt="Dr. Safina Naaz, Calmyra founder" width="800" height="1000" decoding="async" loading="lazy">
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html#hero" class="footer-logo-link" aria-label="Calmyra home">
+                        <img src="assets/images/logo.png" alt="Calmyra — healing minds, transforming lives" width="2000" height="2000" decoding="async">
+                    </a>
+                    <p class="footer-tagline">Healing minds, transforming lives.</p>
+                    <span class="footer-address-label">Address</span>
+                    <p class="footer-address">Calmyra Wellness Centre, Bengaluru, Karnataka 560001, India</p>
+                    <p class="footer-contact-links">
+                        <a href="mailto:info@calmyra.com">info@calmyra.com</a><br>
+                        <a href="tel:+917012345678">+91 70123 45678</a>
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Services</h4>
+                    <ul class="footer-col-list">
+                        <li><a href="index.html#services">Anxiety</a></li>
+                        <li><a href="index.html#services">Trauma</a></li>
+                        <li><a href="index.html#services">Productivity</a></li>
+                        <li><a href="index.html#services">Depression</a></li>
+                        <li><a href="index.html#services">Relationship counselling</a></li>
+                        <li><a href="index.html#services">Laughter therapy</a></li>
+                        <li><a href="index.html#services">Dementia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Team</h4>
+                    <ul class="footer-col-list">
+                        <li><a href="team.html">About us</a></li>
+                        <li><a href="index.html#get-started">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Resources</h4>
+                    <ul class="footer-col-list">
+                        <li><a href="index.html#get-started">WhatsApp community</a></li>
+                        <li><a href="index.html#hero">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Legal</h4>
+                    <ul class="footer-col-list">
+                        <li><a href="index.html#footer">Terms and conditions</a></li>
+                        <li><a href="index.html#footer">Privacy policy</a></li>
+                    </ul>
+                    <h4 class="footer-col-title">Emergency helpline</h4>
+                    <ul class="footer-helpline-list">
+                        <li>NIMHANS — 080 4611 0007</li>
+                        <li>Tele MANAS — 14416</li>
+                        <li>Kiran — 9152987821</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-bar">
+                <p class="footer-copyright">&copy; 2026 Calmyra. All rights reserved.</p>
+                <div class="footer-social" aria-label="Social links">
+                    <a href="#" rel="noopener noreferrer">X</a>
+                    <a href="#" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="#" rel="noopener noreferrer">Instagram</a>
+                    <a href="#" rel="noopener noreferrer">YouTube</a>
+                    <a href="#" rel="noopener noreferrer">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
