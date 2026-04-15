@@ -812,6 +812,8 @@ a.nav-brand {
     min-width: 140px;
     height: 44px;
     font-size: 0.95rem;
+    z-index: 3;
+    white-space: nowrap;
 }
 
 .pill-blue { background: #D6EDF2; color: #2E5460; }
@@ -823,6 +825,11 @@ a.nav-brand {
 .pill-red { background: #F8D6D0; color: #8B2F2F; }
 
 .tag-left-top { top: 18%; left: -2%; }
+
+.hero-stage .tag {
+    z-index: 3;
+    max-width: 260px;
+}
 
 .sr-only {
     position: absolute;
@@ -1968,6 +1975,80 @@ section.section-faq {
 .pill-peach { right: 8%; top: 44%; }
 .pill-red { bottom: 10%; right: 2%; }
 
+/* Make hero floating tags readable on all devices */
+@media (max-width: 1024px) {
+    .hero-stage {
+        width: min(100%, 520px);
+    }
+
+    .tag,
+    .pill {
+        box-shadow: 0 12px 30px rgba(46, 58, 57, 0.08);
+    }
+
+    .pill {
+        min-width: 118px;
+        height: 40px;
+        font-size: 0.88rem;
+        padding: 0.65rem 0.9rem;
+    }
+
+    .tag {
+        padding: 0.85rem 1.05rem;
+    }
+
+    .pill-yellow { right: 0%; }
+    .pill-blue { right: 2%; }
+    .pill-peach { right: 2%; }
+    .pill-red { right: 2%; }
+    .tag-left-top { left: 0%; }
+}
+
+@media (max-width: 768px) {
+    .hero-stage {
+        width: min(100%, 460px);
+        min-height: 480px;
+    }
+
+    .pill {
+        min-width: 108px;
+        height: 38px;
+        font-size: 0.84rem;
+        padding: 0.55rem 0.75rem;
+    }
+
+    .tag {
+        max-width: 220px;
+        padding: 0.75rem 0.95rem;
+    }
+
+    /* Reposition to avoid overlap on small screens */
+    .pill-yellow { top: 6%; right: 0%; }
+    .pill-blue { top: 18%; right: 4%; }
+    .pill-peach { top: 46%; right: 2%; }
+    .pill-violet { right: 10%; bottom: 34%; }
+    .pill-pink { bottom: 22%; left: 0%; }
+    .pill-green { bottom: 6%; left: 0%; }
+    .pill-red { bottom: 10%; right: 4%; }
+    .tag-left-top { top: 14%; left: 0%; }
+}
+
+@media (max-width: 480px) {
+    .hero-stage {
+        min-height: 440px;
+    }
+
+    .pill {
+        min-width: 96px;
+        height: 34px;
+        font-size: 0.78rem;
+    }
+
+    .tag {
+        max-width: 200px;
+    }
+}
+
 /* Buttons */
 .btn {
     display: inline-flex;
@@ -2131,13 +2212,6 @@ section#services.section-wellness-intro .intro-copy-wellness h2 {
 
 .card .btn {
     margin-top: 1rem;
-}
-
-/* About */
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
 }
 
 /* CTA */
