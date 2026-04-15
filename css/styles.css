@@ -3170,3 +3170,272 @@ section#services.section-wellness-intro .intro-copy-wellness h2 {
 .section-specialized-reference .specialized-ref-label-3 {
     margin-top: 36vh;
 }
+
+/* -------------------------------------------------------
+   Silent luxury theme pass (layout-safe overrides only)
+   ------------------------------------------------------- */
+:root {
+    --primary: #8FA79A;
+    --secondary: #8FA79A;
+    --accent: #C2A96A;
+    --background: #F6F7F5;
+    --alt-background: #EEF1EC;
+    --text-primary: #2E2E2E;
+    --text-secondary: #6F7A73;
+    --border-radius: 14px;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+
+section,
+.section-intro,
+.section-get-started,
+.section-services,
+.section-testimonials,
+.section-activate,
+.section-specialized-services,
+section.section-faq,
+.activate-panel,
+.glass-card,
+.service-line,
+.testimonial-slide,
+.intro-copy-wellness,
+.intro-illustration-shell {
+    background-color: var(--background);
+}
+
+.section-blue,
+.section-wellness-intro,
+.assess-process,
+.assess-tests-section,
+.assess-cta,
+.section-specialized-reference {
+    background-color: var(--alt-background);
+    background-image: none;
+}
+
+/* Make logo the dominant visual anchor without layout changes */
+.nav-brand {
+    position: relative;
+    isolation: isolate;
+}
+
+.nav-brand::before {
+    content: "";
+    position: absolute;
+    inset: -18px -26px;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(194, 169, 106, 0.08) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.nav-brand img {
+    position: relative;
+    z-index: 1;
+    height: clamp(86px, 17vw, 140px);
+    max-height: 140px;
+    filter: drop-shadow(0 15px 35px rgba(194, 169, 106, 0.35));
+}
+
+/* Keep navbar calm so logo stands out */
+#navbar {
+    background: rgba(246, 247, 245, 0.94);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+#navbar.scrolled {
+    background: rgba(246, 247, 245, 0.96);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+}
+
+.nav-menu a,
+.nav-link,
+.nav-mega-btn,
+.nav-ns-btn {
+    color: var(--text-primary);
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.nav-menu a:hover,
+.nav-link:hover,
+.nav-mega-btn:hover,
+.nav-ns-btn:hover {
+    opacity: 1;
+    color: var(--primary);
+}
+
+/* Softer heading dominance */
+h1, h2 {
+    color: var(--text-primary);
+    font-weight: 560;
+    letter-spacing: -0.01em;
+}
+
+h3, h4, h5, h6 {
+    color: var(--text-primary);
+    font-weight: 540;
+}
+
+p, li, .text-muted, .hero-copy p, .section-header p {
+    color: var(--text-secondary);
+}
+
+/* Calm button system */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-activate,
+.btn-get-started-send,
+.btn-know-more,
+.specialized-cta {
+    background: #8FA79A;
+    color: #ffffff;
+    border-color: #8FA79A;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-activate:hover,
+.btn-get-started-send:hover,
+.btn-know-more:hover,
+.specialized-cta:hover {
+    background: #7C9688;
+    border-color: #7C9688;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Replace hard edges with soft premium surfaces */
+.card,
+.glass-card,
+.service-line,
+.testimonial-slide,
+.faq-item,
+.intro-copy-wellness,
+.intro-illustration-shell,
+.specialized-ref-card,
+.mega-panel,
+.mega-card {
+    border-radius: 14px;
+    border-color: rgba(46, 46, 46, 0.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Extra breathing room below fixed header */
+.hero-section {
+    padding-top: 136px;
+    min-height: calc(100vh - 136px);
+}
+
+/* Global responsiveness tune-up across desktop/tablet/mobile */
+@media (min-width: 1600px) {
+    .container,
+    .nav-container {
+        max-width: 1320px;
+    }
+
+    .hero-panel {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .nav-container {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .nav-brand img {
+        height: clamp(72px, 12vw, 108px);
+        max-height: 108px;
+    }
+
+    .hero-section {
+        padding-top: 120px;
+        min-height: calc(100vh - 120px);
+    }
+
+    .hero-panel {
+        gap: 2.2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container,
+    .nav-container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .nav-menu-primary {
+        gap: 1.1rem;
+    }
+
+    .nav-brand img {
+        height: clamp(64px, 11vw, 92px);
+        max-height: 92px;
+    }
+
+    .hero-section {
+        padding-top: 112px;
+        min-height: auto;
+    }
+
+    .hero-panel {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+        padding: 2rem 0 3rem;
+    }
+
+    .hero-copy {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-brand::before {
+        inset: -12px -16px;
+    }
+
+    .nav-brand img {
+        height: clamp(56px, 14vw, 80px);
+        max-height: 80px;
+    }
+
+    .hero-section {
+        padding-top: 100px;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+    }
+
+    .hero-text {
+        font-size: 0.98rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container,
+    .nav-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .nav-brand img {
+        height: clamp(52px, 17vw, 72px);
+        max-height: 72px;
+    }
+
+    .hero-section {
+        padding-top: 92px;
+    }
+}
