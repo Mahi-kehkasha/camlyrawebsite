@@ -2458,6 +2458,8 @@ section#services.section-wellness-intro .intro-copy-wellness h2 {
 }
 
 .specialized-nav-pill {
+    appearance: none;
+    font-family: inherit;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -3160,17 +3162,6 @@ section#services.section-wellness-intro .intro-copy-wellness h2 {
     box-shadow: 0 16px 32px rgba(90, 63, 12, 0.14);
 }
 
-/* Keep each service label aligned with its corresponding card block */
-.section-specialized-reference .specialized-ref-card-2,
-.section-specialized-reference .specialized-ref-card-3 {
-    margin-top: 36vh;
-}
-
-.section-specialized-reference .specialized-ref-label-2,
-.section-specialized-reference .specialized-ref-label-3 {
-    margin-top: 36vh;
-}
-
 /* -------------------------------------------------------
    Silent luxury theme pass (layout-safe overrides only)
    ------------------------------------------------------- */
@@ -3438,4 +3429,394 @@ p, li, .text-muted, .hero-copy p, .section-header p {
     .hero-section {
         padding-top: 92px;
     }
+}
+
+/* Final enforced Elementor-like sticky stack behavior */
+.section-specialized-reference .specialized-ref-layout {
+    display: grid;
+    grid-template-columns: 95px 28px minmax(0, 1fr);
+    align-items: start;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.section-specialized-reference .specialized-ref-left {
+    position: relative;
+}
+
+.section-specialized-reference .specialized-ref-right {
+    position: relative;
+    min-height: 300vh;
+}
+
+.section-specialized-reference .specialized-ref-label {
+    position: sticky;
+    left: 0;
+    width: 74px;
+    height: 74px;
+    padding: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.15;
+    z-index: 6;
+}
+
+.section-specialized-reference .specialized-ref-label-1 {
+    top: 10px;
+}
+
+.section-specialized-reference .specialized-ref-label-2 {
+    top: 110px;
+}
+
+.section-specialized-reference .specialized-ref-label-3 {
+    top: 210px;
+}
+
+.section-specialized-reference .specialized-ref-card {
+    position: sticky;
+    background: #f3e7c7;
+    border: 1px solid #d6ba67;
+    box-shadow: 0 8px 20px rgba(90, 63, 12, 0.08);
+}
+
+.section-specialized-reference .specialized-ref-card-1 {
+    top: 10px;
+    z-index: 3;
+}
+
+.section-specialized-reference .specialized-ref-card-2 {
+    top: 70px;
+    z-index: 2;
+    margin-top: 38vh;
+}
+
+.section-specialized-reference .specialized-ref-card-3 {
+    top: 130px;
+    z-index: 1;
+    margin-top: 76vh;
+}
+
+.section-specialized-reference .specialized-ref-card + .specialized-ref-card {
+    margin-top: 1rem;
+}
+
+.section-specialized-reference .specialized-ref-label-2 {
+    margin-top: 38vh;
+}
+
+.section-specialized-reference .specialized-ref-label-3 {
+    margin-top: 76vh;
+}
+
+@media (max-width: 900px) {
+    .section-specialized-reference .specialized-ref-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .section-specialized-reference .specialized-ref-left {
+        display: flex;
+        gap: 0.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .section-specialized-reference .specialized-ref-label,
+    .section-specialized-reference .specialized-ref-card {
+        position: static;
+    }
+
+    .section-specialized-reference .specialized-ref-right {
+        min-height: auto;
+    }
+}
+
+/* Clean presentation polish for specialized sticky section */
+.section-specialized-reference .specialized-services-header {
+    margin-bottom: 1.6rem;
+}
+
+.section-specialized-reference .specialized-services-header h2 {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.15;
+}
+
+.section-specialized-reference .specialized-ref-layout {
+    grid-template-columns: 96px 34px minmax(0, 1fr);
+}
+
+.section-specialized-reference .specialized-ref-left {
+    padding-top: 4px;
+}
+
+.section-specialized-reference .specialized-ref-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #2f2a22;
+    background: #efe4c6;
+    border: 1px solid #d9be76;
+    box-shadow: 0 8px 18px rgba(120, 95, 35, 0.12);
+}
+
+.section-specialized-reference .specialized-ref-card {
+    border-radius: 18px;
+    border: 1px solid #d6ba67;
+    background: #f3e7c7;
+    padding: 1.1rem 1.15rem 1rem;
+    box-shadow: 0 10px 24px rgba(115, 86, 24, 0.09);
+    overflow: hidden;
+}
+
+.section-specialized-reference .specialized-ref-card h3 {
+    font-size: 2rem;
+    line-height: 1.15;
+    margin-bottom: 0.42rem;
+}
+
+.section-specialized-reference .specialized-ref-card p {
+    margin-bottom: 0.62rem;
+}
+
+.section-specialized-reference .specialized-tagline {
+    font-style: italic;
+}
+
+.section-specialized-reference .specialized-chip-row {
+    gap: 0.45rem;
+    margin: 0.45rem 0 0.8rem;
+}
+
+.section-specialized-reference .specialized-chip-row span {
+    border-radius: 999px;
+    border: 1px solid #d5a8b0;
+    background: #edd9de;
+    color: #4c3137;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.68rem;
+}
+
+.section-specialized-reference .specialized-chip-row--green span {
+    border-color: #98c39d;
+    background: #dff0dd;
+    color: #2f5733;
+}
+
+.section-specialized-reference .specialized-list {
+    margin-bottom: 0.9rem;
+    gap: 0.35rem;
+}
+
+.section-specialized-reference .specialized-list li {
+    font-size: 0.94rem;
+    line-height: 1.45;
+}
+
+.section-specialized-reference .specialized-cta {
+    background: #d89a10;
+    border-radius: 10px;
+    padding: 0.56rem 1rem;
+    font-size: 1rem;
+}
+
+.section-specialized-reference .specialized-ref-card.active,
+.section-specialized-reference .specialized-ref-card.is-active {
+    box-shadow: 0 14px 30px rgba(115, 86, 24, 0.14);
+}
+
+/* ==========================================================
+   FINAL LOCK: Specialized Services exact responsive behavior
+   ========================================================== */
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .section-specialized-reference .specialized-ref-layout {
+        grid-template-columns: 96px 34px minmax(0, 1fr) !important;
+        max-width: 980px !important;
+    }
+
+    .section-specialized-reference .specialized-ref-left {
+        padding-top: 0 !important;
+    }
+
+    .section-specialized-reference .specialized-ref-right {
+        min-height: 220vh !important;
+    }
+
+    .section-specialized-reference .specialized-ref-label {
+        position: sticky !important;
+        width: 74px !important;
+        height: 74px !important;
+        padding: 0 !important;
+        border-radius: 50% !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        line-height: 1.15 !important;
+        font-size: 0.78rem !important;
+        margin: 0 !important;
+    }
+
+    .section-specialized-reference .specialized-ref-label-1 {
+        top: 10px !important;
+        margin-top: 0 !important;
+    }
+
+    .section-specialized-reference .specialized-ref-label-2 {
+        top: 110px !important;
+        margin-top: 44vh !important;
+    }
+
+    .section-specialized-reference .specialized-ref-label-3 {
+        top: 210px !important;
+        margin-top: 88vh !important;
+    }
+
+    .section-specialized-reference .specialized-ref-card {
+        position: sticky !important;
+        border-radius: 18px !important;
+        padding: 1rem 1.05rem !important;
+    }
+
+    .section-specialized-reference .specialized-ref-card-1 {
+        top: 10px !important;
+        z-index: 3 !important;
+        margin-top: 0 !important;
+    }
+
+    .section-specialized-reference .specialized-ref-card-2 {
+        top: 70px !important;
+        z-index: 2 !important;
+        margin-top: 44vh !important;
+    }
+
+    .section-specialized-reference .specialized-ref-card-3 {
+        top: 130px !important;
+        z-index: 1 !important;
+        margin-top: 88vh !important;
+    }
+
+    .section-specialized-reference .specialized-ref-card + .specialized-ref-card {
+        margin-top: 0 !important;
+    }
+
+    .section-specialized-reference .specialized-ref-card h3 {
+        font-size: 2rem !important;
+        line-height: 1.14 !important;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .section-specialized-reference .specialized-ref-layout {
+        grid-template-columns: 84px 22px minmax(0, 1fr) !important;
+    }
+
+    .section-specialized-reference .specialized-ref-right {
+        min-height: 190vh !important;
+    }
+
+    .section-specialized-reference .specialized-ref-label {
+        position: sticky !important;
+        width: 64px !important;
+        height: 64px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-radius: 50% !important;
+        font-size: 0.72rem !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .section-specialized-reference .specialized-ref-label-1 {
+        top: 8px !important;
+        margin-top: 0 !important;
+    }
+
+    .section-specialized-reference .specialized-ref-label-2 {
+        top: 86px !important;
+        margin-top: 40vh !important;
+    }
+
+    .section-specialized-reference .specialized-ref-label-3 {
+        top: 164px !important;
+        margin-top: 80vh !important;
+    }
+
+    .section-specialized-reference .specialized-ref-card {
+        position: sticky !important;
+        padding: 0.95rem 0.95rem !important;
+    }
+
+    .section-specialized-reference .specialized-ref-card-1 {
+        top: 8px !important;
+        margin-top: 0 !important;
+    }
+
+    .section-specialized-reference .specialized-ref-card-2 {
+        top: 62px !important;
+        margin-top: 40vh !important;
+    }
+
+    .section-specialized-reference .specialized-ref-card-3 {
+        top: 116px !important;
+        margin-top: 80vh !important;
+    }
+
+    .section-specialized-reference .specialized-ref-card h3 {
+        font-size: 1.7rem !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .section-specialized-reference .specialized-ref-layout {
+        grid-template-columns: 1fr !important;
+    }
+
+    .section-specialized-reference .specialized-ref-left {
+        display: flex !important;
+        gap: 0.55rem !important;
+        margin-bottom: 0.7rem !important;
+        justify-content: flex-start !important;
+    }
+
+    .section-specialized-reference .specialized-ref-label {
+        position: static !important;
+        width: auto !important;
+        height: auto !important;
+        border-radius: 999px !important;
+        padding: 0.42rem 0.7rem !important;
+        margin: 0 !important;
+        font-size: 0.72rem !important;
+        line-height: 1 !important;
+    }
+
+    .section-specialized-reference .specialized-ref-right {
+        min-height: auto !important;
+    }
+
+    .section-specialized-reference .specialized-ref-card {
+        position: static !important;
+        margin-top: 0 !important;
+        padding: 0.95rem 0.9rem !important;
+    }
+
+    .section-specialized-reference .specialized-ref-card + .specialized-ref-card {
+        margin-top: 0.75rem !important;
+    }
+
+    .section-specialized-reference .specialized-ref-card h3 {
+        font-size: 1.28rem !important;
+    }
+}
+
+/* Prevent extra blank tail under specialized section */
+.section-specialized-reference {
+    min-height: auto !important;
+    padding-bottom: 1rem !important;
 }
