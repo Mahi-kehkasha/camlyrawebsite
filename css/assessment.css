@@ -15,18 +15,6 @@ body.assessment-page {
     overflow: visible;
 }
 
-.assessment-page #navbar {
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
-}
-
-.assessment-page .nav-link-active {
-    text-decoration: underline;
-    text-underline-offset: 6px;
-    font-weight: 600;
-}
-
 /* —— Hero —— */
 .assess-hero {
     padding: 6.5rem 0 4.5rem;
